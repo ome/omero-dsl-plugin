@@ -92,16 +92,13 @@ class DslPluginBase implements Plugin<Project> {
             return dslFile
         }
 
-        if (singleFile.isFile() || !dslFile) {
+        // If singleFile starts with the project root directory
+        // then we know it is a full path to a file
+        // singleFile.toPath().startsWith(project.rootDir.toPath())
+        if (!dslFile || singleFile.isAbsolute()) {
             return singleFile
         }
 
-        if (dslFile.isFile()) {
-            return dslFile
-        }
-
-        // DSL file is not a file, but a path.
-        // Single file is also not a file or absolute so also a path
         return new File(dslFile, "$singleFile")
     }
 
