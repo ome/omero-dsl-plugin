@@ -7,6 +7,8 @@ This plugin manages the reading of `*.ome.xml` mappings and compilation of `.vm`
 
 ### Build
 
+The plugin can be built using Gradle 5 or Gradle 6.
+
 To build the plugin run:
 ```shell
 gradle build
