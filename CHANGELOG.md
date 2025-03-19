@@ -1,3 +1,8 @@
+5.5.4 (March 2025)
+------------------
+
+- Bump org.openmicroscopy.plugin-project to 5.7.4
+
 5.5.3 (March 2025)
 ------------------
 
